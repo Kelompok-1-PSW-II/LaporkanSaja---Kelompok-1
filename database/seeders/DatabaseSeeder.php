@@ -14,13 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-            //RegionalSeeder::class,
-            //MasterSeeder::class,
-            //FinanceSeeder::class,
-            //CrmSeeder::class,
-            //EmployeeSeeder::class,
-            AdminSeeder::class,
-        ]);
+        $this->call(UserSeeder::class);
+        $this->call(KategoriSeeder::class);
     }
 }

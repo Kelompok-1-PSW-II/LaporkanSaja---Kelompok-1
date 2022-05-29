@@ -1,4 +1,4 @@
-Panduan Instalasi Sistem Informasi LaporkanSaja!
+<h3> Panduan Instalasi Program LaporkanSaja! </h3>
 
 1. Version Requirements : 
     - Laravel 8 or greater

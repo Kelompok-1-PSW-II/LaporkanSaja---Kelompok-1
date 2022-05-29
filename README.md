@@ -1,4 +1,4 @@
-<img src="public/img/logo.png" width="200px" style="float: right;">
+<img src="public/img/logo.png" width="250px">
 <h3> Panduan Instalasi Website LaporkanSaja! </h3>
 
 1. Version Requirements : 

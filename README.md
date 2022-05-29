@@ -1,4 +1,4 @@
-<center> <h3> Panduan Instalasi Program LaporkanSaja! </h3> </center>
+<h3> Panduan Instalasi Program LaporkanSaja! </h3>
 
 1. Version Requirements : 
     - Laravel 8 or greater

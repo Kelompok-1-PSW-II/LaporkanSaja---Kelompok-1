@@ -9,4 +9,4 @@
 4. Buka terminal sesuai direktori kode program, kemudian masukan perintah 'php artisan migrate' untuk melakukan migrasi.
 5. Untuk Admin dapat dipanggil dengan perintah 'php artisan db:seed' setelah melakukan migrate
 6. Kemudian masukkan perintah 'php artisan serve' untuk menjalankan program
-7. Program Berjalan!
+7. Program dapat dijalankan pada browser apa saja!

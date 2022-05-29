@@ -1,5 +1,5 @@
 <img src="public/img/logo.png" width="200px">
-<h3> Panduan Instalasi Program LaporkanSaja! </h3>
+<h3> Panduan Instalasi Website LaporkanSaja! </h3>
 
 1. Version Requirements : 
     - Laravel 8 or greater

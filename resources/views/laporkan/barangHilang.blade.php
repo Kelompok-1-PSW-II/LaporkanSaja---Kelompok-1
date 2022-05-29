@@ -15,8 +15,12 @@
         <center>
             <h1><b>LAPORKAN BARANG HILANG</b></h1>
             </center> <br><br><br>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum debitis pariatur fugiat soluta voluptatum ab ea voluptate, deserunt porro rerum eaque quidem laudantium delectus quis incidunt architecto exercitationem quasi ratione doloribus mollitia totam tenetur. Tenetur fugit fuga obcaecati. Vero, ipsum cupiditate iste sequi, quidem vitae pariatur laboriosam, quas magni voluptatum quo quae commodi dolore! Placeat eveniet atque porro voluptas qui optio molestiae ipsum accusamus laudantium voluptatibus doloremque ad fugit ipsam commodi rem aliquam dolores facilis, autem nostrum. Perferendis ex dignissimos adipisci aperiam dicta quis tenetur ea porro iure sequi perspiciatis dolorem, atque dolore accusamus quos ipsa maiores quaerat obcaecati harum, consectetur, reprehenderit debitis eligendi illum. Minima nemo adipisci esse et pariatur accusamus ad ea ab sint, praesentium laboriosam doloribus expedita atque facilis non recusandae mollitia doloremque numquam accusantium cupiditate? Quas obcaecati natus autem minus eos vitae laudantium voluptas ea? Voluptas velit beatae quaerat omnis eveniet illo, consequatur harum est officiis minima corporis deserunt aspernatur distinctio quo. Maxime at ut nemo exercitationem neque distinctio possimus, error iure sit ducimus quis atque itaque officia perspiciatis. Provident temporibus eum labore ipsam magnam optio natus possimus voluptatem fuga quam, voluptatibus fugit. Dignissimos, impedit tempore pariatur nam quis, nihil dicta neque aliquam labore i ut eaque, nesciunt facilis eos ab iste sint?</p>
-    </div>
+            <center style="font-size: 18px">
+                <h4>Jika Anda merasa menemukan barang dan tidak tahu harus melapor kemana, Silahkan pergunakan fitur ini untuk membantu anda mempermudah melaporkan penemuan barang yang anda yang temukan. </h4>
+                <h4> Dengan fitur ini, barang anda yang temukan akan dapat dilihat oleh user lainnya yang mungkin saja adalah salah satu orang yang memiliki barang yang anda temukan.</h4>
+                <h4>Segera laporkan penemuan barang kalian melalui form dibawah ini, dengan mengisi semua barisnya dan jangan lupa sertakan poto barang yang sesuai, ciri-ciri barang yang detail agar user lain dapat secara lebih spesifik mengenali barang yang anda lapor, Yang terakhir jangan lupa sertakan kategori barang yang anda laporkan sesuai dengan barang yang benar akan anda laporkan.</h4>
+            </center>
+</div>
 </div>
 
 <div class="container">

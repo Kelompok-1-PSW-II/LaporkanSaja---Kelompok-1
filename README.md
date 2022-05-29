@@ -1,4 +1,4 @@
-<img src="public/img/logo.png">
+<img src="public/img/logo.png" width="200px">
 <h3> Panduan Instalasi Program LaporkanSaja! </h3>
 
 1. Version Requirements : 

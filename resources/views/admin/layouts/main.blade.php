@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Halaman </title>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
@@ -37,34 +36,34 @@
 		</div>
 		<ul class="menu">
 			<li class="menu-item menu-item-has-children">
-				<a href="/beranda" data-toggle="sub-menu">Beranda</a>
+				<a href="/beranda" data-toggle="sub-menu">BERANDA</a>
 			</li>
 			<li class="menu-item">
 				@if(Auth()->User()->role == 'user')
-					<a href="/pengumuman">Pengumuman</a>
+					<a href="/pengumuman">PENGUMUMAN</a>
 				@else
-					<a href="/blog">Pengumuman</a>
+					<a href="/blog">PENGUMUMAN</a>
 				@endif
 			</li>
 			<li class="menu-item menu-item-has-children">
-				<a href="#" data-toggle="sub-menu">Laporkan<i class="plus"></i></a>
+				<a href="#" data-toggle="sub-menu">LAPORKAN<i class="plus"></i></a>
 				<ul class="sub-menu">
 					<li class="menu-item"><a href="/barang-hilang">Laporkan Barang Hilang</a></li>
 					<li class="menu-item"><a href="/barang-temuan">Laporkan Barang Temuan</a></li>
 				</ul>
 			</li>
 			<li class="menu-item menu-item-has-children">
-				<a href="#" data-toggle="sub-menu">Temukan<i class="plus"></i></a>
+				<a href="#" data-toggle="sub-menu">TEMUKAN<i class="plus"></i></a>
 				<ul class="sub-menu">
 					<li class="menu-item"><a href="/cariHilang">Cari Barang Hilang</a></li>
 					<li class="menu-item"><a href="/ambiltemuan">Ambil Barang Temuan</a></li>
 				</ul>
 			</li>
 			<li class="menu-item">
-				<a href="/grafik">Grafik</a>
+				<a href="/grafik">GRAFIK</a>
 			</li>
 			<li class="menu-item">
-				<a href="/profil">Profil</a>
+				<a href="/profil">PROFIL</a>
 			</li>
 			<li class="menu-item">
 			<a href="/logout"><i class='bx bx-log-out'></i></a>

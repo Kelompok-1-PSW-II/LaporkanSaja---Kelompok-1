@@ -7,9 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HilangController;
 use App\Models\Blog;
 
-Route::group(['middleware'=>['auth','CheckRole:admin']],function(){
-    //PENGUMUMAN BAGIAN ADMIN
-    Route::resource('blog', BlogController::class);
+Route::group(['middleware'=>['auth','CheckRole:user']],function(){   
     Route::get('/ambiltemuan/edit/{id}', [TemuanController::class, 'edit'])->name('temuan.edit');
     Route::patch('/ambiltemuan/{id}', [TemuanController::class, 'update'])->name('temuan.update');
     Route::delete('/ambiltemuan/{id}', [TemuanController::class, 'destroy'])->name('temuan.destroy');
@@ -18,6 +16,9 @@ Route::group(['middleware'=>['auth','CheckRole:admin']],function(){
     Route::patch('/cariHilang/{id}', [HilangController::class, 'update'])->name('hilang.update');
     Route::delete('/cariHilang/{id}', [HilangController::class, 'destroy'])->name('hilang.destroy');
 
+});
+Route::group(['middleware'=>['auth','CheckRole:admin']],function(){ 
+Route::resource('blog', BlogController::class);
 });
 Route::group(['middleware'=>['auth','CheckRole:user']],function(){
     //Pengumuman

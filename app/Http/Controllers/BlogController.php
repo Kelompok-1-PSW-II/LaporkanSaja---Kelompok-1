@@ -58,11 +58,11 @@ class BlogController extends Controller
 
         if($blog){
             //redirect dengan pesan sukses
-            Alert::success('Success Title', 'Berhasil Menambahkan Data ');
+            Alert::success('Berhasil Menambahkan Data ');
             return redirect()->route('blog.index');
         }else{
             //redirect dengan pesan error
-            Alert::error('Error Title', 'Gagal !!');
+            Alert::error('Gagal :(');
             return redirect()->route('blog.index'); 
         }
     }
@@ -124,11 +124,11 @@ class BlogController extends Controller
 
         if($blog){
             //redirect dengan pesan sukses
-            Alert::success('Success Title', 'Berhasil Mengubah Data ');
+            Alert::success('Berhasil Mengubah Data ');
             return redirect()->route('blog.index');
         }else{
             //redirect dengan pesan error
-            Alert::error('Error Title', 'Gagal !!');
+            Alert::error('Gagal !!');
             return redirect()->route('blog.index');
         }
     }
@@ -146,11 +146,11 @@ class BlogController extends Controller
 
         if($blog){
             //redirect dengan pesan sukses
-            Alert::success('Success Title', 'Berhasil Menghapus Data ');
+            Alert::success('Berhasil Menghapus Data ');
             return redirect()->route('blog.index');
         }else{
             //redirect dengan pesan error
-            Alert::error('Error Title', 'Gagal !!');
+            Alert::error('Gagal !!');
             return redirect()->route('blog.index');
         }
     }

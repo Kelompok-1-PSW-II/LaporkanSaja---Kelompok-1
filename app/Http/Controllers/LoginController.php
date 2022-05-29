@@ -14,11 +14,11 @@ class LoginController extends Controller
     public function postlogin(Request $request)
     {
         if(Auth::attempt($request->only('username','password'))){  
-            Alert::success('Success Title', ' Berhasil Login ');
+            Alert::success(' Berhasil Login ');
             return redirect('/beranda');
         }
         else{
-            Alert::error('Error Title', 'Gagal Login !!');
+            Alert::error('Gagal Login :(');
             return redirect('/')->withInput()->with('error','Gagal Login !!');
         }
     }
@@ -48,7 +48,7 @@ class LoginController extends Controller
         $user -> password =bcrypt($request->password);
         $user -> remember_token = Str::random(60);
         $user -> save();
-        Alert::success('Success Title', ' Data Berhasil Ditambahkan ');
+        Alert::success(' Data Berhasil Ditambahkan ');
         return redirect('/login');
     }
     public function edituser(Request $request)
@@ -71,7 +71,7 @@ class LoginController extends Controller
             $user -> foto = $imageName;
             $user ->save();
         }
-        Alert::success('Success Title', ' Data Diubah ');
+        Alert::success(' Data Diubah ');
         return redirect('/profil');
     }
 }

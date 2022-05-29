@@ -9,15 +9,16 @@ class Helper{
         $menu=$kategori->getAllCatagory(); 
         if($menu){
             ?>
-                <li><a href="{{url('/cariHilang')}}">Semua Barang</a></li>
+            <center>
+                <a class=" btn btn-primary mb1 black bg-silver" href="/cariHilang">Semua Barang</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <?php
                     foreach($menu as $cat_info){
                             ?>
-                            <li><a class="nav-link" href="<?php echo route('cariHilang',$cat_info->slug); ?>"><?php echo $cat_info->nama_kategori; ?></a>
-                            </li>
-                            <?php
+                            <a class=" btn btn-default" href="<?php echo route('cariHilang',$cat_info->slug); ?>"><?php echo $cat_info->nama_kategori; ?></a>
+                            &nbsp;&nbsp;&nbsp;<?php
                     }
                     ?>
+            </center>
         <?php
         }
     }
@@ -27,15 +28,16 @@ class Helper{
         $menu=$kategori->getAllCatagory(); 
         if($menu){
             ?>
-            <li><a href="{{url('/cariHilang')}}">Semua Barang</a></li>
+            <center>
+                <a class=" btn btn-primary mb1 black bg-silver" href="/ambiltemuan">Semua Barang</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <?php
                     foreach($menu as $cat_info){
                             ?>
-                            <li><a href="<?php echo route('ambilTemuan',$cat_info->slug); ?>"><?php echo $cat_info->nama_kategori; ?></a>
-                            </li>
-                            <?php
+                            <a  class=" btn btn-default" href="<?php echo route('ambilTemuan',$cat_info->slug); ?>"><?php echo $cat_info->nama_kategori; ?></a>
+                            &nbsp;&nbsp;&nbsp;<?php
                     }
                     ?>
+            </center>
         <?php
         }
     }

@@ -45,6 +45,15 @@
                     </div>
             </div><br>
             <div class="mb-3 row">
+                <label for="kategori" class="col-sm-2 col-form-label">Status</label>
+                <div class="col-sm-10">
+                    <select class="form-control"  aria-label="size 3 select example" name="status" >
+                        <option value="Belum Diambil">Belum Diambil</option>
+                        <option value="Sudah Diambil">Sudah Diambil</option>
+                      </select>
+                </div>
+            </div><br>
+            <div class="mb-3 row">
                 <label for="image" class="col-sm-2 col-form-label">Foto barang</label>
                     <div class="col-sm-10">
                     <input class="form-control" value="{{$temuan->gambar}}" type="file" id="image" name="gambar">

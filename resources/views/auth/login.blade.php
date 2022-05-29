@@ -1,5 +1,3 @@
-@extends('layouts.main')
-@section('container')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,5 +28,3 @@
               </div>
       </body>
 </html>
-
-@endsection

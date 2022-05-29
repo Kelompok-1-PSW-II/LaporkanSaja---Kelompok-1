@@ -1,7 +1,4 @@
 
-@extends('layouts.main')
-@section('container')
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +16,7 @@
                   @csrf
                     <input type="text" class="box" name="name" id="name" placeholder="Nama" required><br>
                     <input type="text" class="box" name="username" id="username" placeholder="Username" required><br>
-                    <input type="email" class="box" name="email" id="floatingInput" placeholder="name@example.com" required><br>
+                    <input type="email" class="box" name="email" id="floatingInput" placeholder="nama@gmail.com" required><br>
                     <input type="password" class="box" name="password" id="floatingPassword" placeholder="Password" required><br>
                     <input type="password" class="box" name="password-confirmation" id="floatingPassword" placeholder="Konfirmasi Password" required><br>
                     <center><input class="btn" type="submit"></input></center>
@@ -28,4 +25,3 @@
               </div>
       </body>
 </html>
-@endsection

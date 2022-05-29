@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Temuan extends Model
 {
     use HasFactory;
-    protected $fillable=['nama_barang','slug','no_tel','lokasi','deskripsi','gambar','kategori_id'];
+    protected $fillable=['nama_barang','slug','no_tel','lokasi','deskripsi','gambar','status','kategori_id'];
 }
+

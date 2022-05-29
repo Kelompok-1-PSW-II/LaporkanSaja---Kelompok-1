@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .img{
+            width: 40px;
+		height: 40px;
+		border-radius: 50%;
+            object-fit: cover;
+        }
+        #img-section p,#deactivate p{
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        #img-section b,#img-section button,#deactivate b{
+            font-size: 14px; 
+        }
+        </style>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,18 +84,19 @@
 			<li class="menu-item">
 				<a href="/grafik">Grafik</a>
 			</li>
-			<li class="menu-item">
-				<a href="/profil">Profil</a>
+			<li class="menu-item menu-item-has-children">
+                @csrf
+                <div class="d-flex align-items-start py-3 border-bottom">
+                    <a href="/profil" data-toggle="sub-menu" style="text-decoration: none; font-family: Abhaya Libre ExtraBold; font-size: 20px; "><img src="/images/{{Auth()->User()->foto}}"
+                        class="img" alt="">&nbsp;{{ auth()->user()->name }}
+					</a>
+				</div>
+                <ul class="sub-menu">
+					<li class="menu-item"><a href="/profil">PROFIL</a></li>
+					<li class="menu-item"><a href="/logout">LOG OUT</a></li>
+				</ul>
 			</li>
-			<li class="menu-item">
-			<a href="/logout"><i class='bx bx-log-out'></i></a>
-			</li>
-
-			<li class="menu-item">
-			<box-icon name='log-out'></box-icon>
-		</li>
-
-		
+	
 		</ul>
 		</nav>
 		<!-- navigation menu end -->

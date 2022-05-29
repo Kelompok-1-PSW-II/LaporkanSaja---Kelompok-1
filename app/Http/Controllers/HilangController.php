@@ -55,15 +55,16 @@ class HilangController extends Controller
             'no_tel' => $input['no_tel'],
             'lokasi' => $input['lokasi'],
             'gambar' => $imageName,
+            'status' => $input['status'],
             'tanggal' => $input['tanggal'],
             'deskripsi' => $input['deskripsi'],
             'kategori_id' => $input['kategori'],
         ]);
         if($status){
-            Alert::success('Success Title', 'Berhasil Menambahkan Data ');
+            Alert::success('Berhasil Menambahkan Data ');
         }
         else{
-            Alert::error('Error Title', 'Gagal !!');
+            Alert::error('Gagal !!');
         }
         return redirect('/barang-hilang')->with('alert-success','Berhasil Menambahkan Data');
     }
@@ -114,6 +115,7 @@ class HilangController extends Controller
                 'slug' => $slug,
                 'no_tel' => $input['no_tel'],
                 'lokasi' => $input['lokasi'],
+                'status' => $input['status'],
                 'tanggal' => $input['tanggal'],
                 'deskripsi' => $input['deskripsi'],
                 'kategori_id' => $input['kategori'],
@@ -134,19 +136,22 @@ class HilangController extends Controller
                 'no_tel' => $input['no_tel'],
                 'lokasi' => $input['lokasi'],
                 'gambar' => $imageName,
+                'status' => $input['status'],
                 'tanggal' => $input['tanggal'],
                 'deskripsi' => $input['deskripsi'],
                 'kategori_id' => $input['kategori'],
             ])->save();
         }
         if($status){
-            Alert::success('Success Title', 'Berhasil Mengubah Data ');
+            Alert::success('Berhasil Mengubah Data ');
 
         }
         else{
             request()->session('error','Please try again!!');
         }
-        Alert::error('Error Title', 'Gagal !!');
+        Alert::success('Berhasil Mengubah Data ');
+
+       return back();
     }
 
     /**
@@ -161,11 +166,11 @@ class HilangController extends Controller
         $status=$hilang->delete();
         
         if($status){
-            Alert::success('Success Title', 'Data Berhasil Dihapus');
+            Alert::success('Data Berhasil Dihapus');
 
         }
         else{
-            Alert::error('Error Title', 'Gagal !!');
+            Alert::error('Gagal :(');
         }
         return redirect('/cariHilang');
     }

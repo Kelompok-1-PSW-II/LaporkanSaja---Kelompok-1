@@ -46,6 +46,15 @@
                     </div>
             </div><br>
             <div class="mb-3 row">
+                <label for="kategori" class="col-sm-2 col-form-label">Status</label>
+                <div class="col-sm-10">
+                    <select class="form-control"  aria-label="size 3 select example" name="status" >
+                        <option value="Belum Ditemukan">Belum Ditemukan</option>
+                        <option value="Sudah Ditemukan">Sudah Ditemukan</option>
+                      </select>
+                </div>
+            </div><br>
+            <div class="mb-3 row">
                 <label for="image" class="col-sm-2 col-form-label">Foto barang</label>
                     <div class="col-sm-10">
                     <input class="form-control" value="{{$hilang->gambar}}" type="file" id="image" name="gambar">

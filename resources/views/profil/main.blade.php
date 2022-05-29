@@ -1,6 +1,8 @@
+
+@section('container')
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,112 +19,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: aliceblue;
-}
-
-.wrapper{
-    padding: 30px 50px;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    margin: 10px auto;
-    max-width: 600px;
-}
-h4{
-    letter-spacing: -1px;
-    font-weight: 400;
-}
-.img{
-    width: 70px;
-    height: 70px;
-    border-radius: 6px;
-    object-fit: cover;
-}
-#img-section p,#deactivate p{
-    font-size: 12px;
-    color: #777;
-    margin-bottom: 10px;
-    text-align: justify;
-}
-#img-section b,#img-section button,#deactivate b{
-    font-size: 14px; 
-}
-
-label{
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 500;
-    color: #777;
-    padding-left: 3px;
-}
-
-.form-control{
-    border-radius: 10px;
-}
-
-input[placeholder]{
-    font-weight: 500;
-}
-.form-control:focus{
-    box-shadow: none;
-    border: 1.5px solid #0779e4;
-}
-select{
-    display: block;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    height: 40px;
-    padding: 5px 10px;
-    /* -webkit-appearance: none; */
-}
-
-select:focus{
-    outline: none;
-}
-.button{
-    background-color: #fff;
-    color: #315e88;
-}
-.button:hover{
-    background-color: #2b5174;
-    color: #fff;
-}
-.btn-primary{
-    background-color: #0779e4;
-}
-.danger{
-    background-color: #fff;
-    color: #e20404;
-    border: 1px solid #ddd;
-}
-.danger:hover{
-    background-color: #e20404;
-    color: #fff;
-}
-@media(max-width:576px){
-    .wrapper{
-        padding: 25px 20px;
-    }
-    #deactivate{
-        line-height: 18px;
-    }
-}
-
-</style>
-
-
-</head>
 <body>
 	<!-- header start -->
 <header class="header">
@@ -141,47 +37,56 @@ select:focus{
 		<div class="close-nav-menu">
 			<img src="img/close.svg" alt="close">
 		</div>
+		@auth
 		<ul class="menu">
 			<li class="menu-item menu-item-has-children">
-				<a href="/beranda" data-toggle="sub-menu">Beranda</a>
+				<a href="/beranda" data-toggle="sub-menu">BERANDA</a>
 			</li>
 			<li class="menu-item">
-			    @if(Auth()->User()->role == 'user')
-					<a href="/pengumuman">Pengumuman</a>
+				@if(Auth()->User()->role == 'user')
+					<a href="/pengumuman">PENGUMUMAN</a>
 				@else
-					<a href="/blog">Pengumuman</a>
+					<a href="/blog">PENGUMUMAN</a>
 				@endif
 			</li>
 			<li class="menu-item menu-item-has-children">
-				<a href="#" data-toggle="sub-menu">Laporkan<i class="plus"></i></a>
+				<a href="#" data-toggle="sub-menu">LAPORKAN<i class="plus"></i></a>
 				<ul class="sub-menu">
-					<li class="menu-item"><a href="/barang-hilang">Laporkan Barang Hilang</a></li>
-					<li class="menu-item"><a href="/barang-temuan">Laporkan Barang Temuan</a></li>
+					<li class="menu-item"><a href="/barang-hilang">LAPORKAN BARANG HILANG</a></li>
+					<li class="menu-item"><a href="/barang-temuan">LAPORKAN BARANG TEMUAN</a></li>
 				</ul>
 			</li>
 			<li class="menu-item menu-item-has-children">
-				<a href="#" data-toggle="sub-menu">Temukan<i class="plus"></i></a>
+				<a href="#" data-toggle="sub-menu">TEMUKAN<i class="plus"></i></a>
 				<ul class="sub-menu">
-					<li class="menu-item"><a href="/cariHilang">Cari Barang Hilang</a></li>
-					<li class="menu-item"><a href="/ambiltemuan">Ambil Barang Temuan</a></li>
+					<li class="menu-item"><a href="/cariHilang">CARI BARANG HILANG</a></li>
+					<li class="menu-item"><a href="/ambiltemuan">AMBIL BARANG TEMUAN</a></li>
 				</ul>
 			</li>
 			<li class="menu-item">
-				<a href="/grafik">Grafik</a>
+				<a href="/grafik">GRAFIK</a>
 			</li>
-			<li class="menu-item">
-				<a href="/profil">Profil</a>
+			<li class="menu-item menu-item-has-children">
+                @csrf
+                <div class="d-flex align-items-start py-3 border-bottom">
+                    <a href="/profil" data-toggle="sub-menu" style="text-decoration: none; font-family: Abhaya Libre ExtraBold; font-size: 20px; "><img src="/images/{{Auth()->User()->foto}}"
+                        class="img" alt="" style="
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            object-fit: cover;">&nbsp;{{ auth()->user()->name }}
+					</a>
+				</div>
+                <ul class="sub-menu">
+                    
+					<li class="menu-item"><a href="/profil">PROFIL</a></li>
+					<li class="menu-item"><a href="/logout">LOG OUT</a></li>
+				</ul>
 			</li>
-			<li class="menu-item">
-			<a href="/logout"><i class='bx bx-log-out'></i></a>
-			</li>
-
-			<li class="menu-item">
-			<box-icon name='log-out'></box-icon>
-		</li>
 
 		
 		</ul>
+		@endauth
 		</nav>
 		<!-- navigation menu end -->
 	</div>

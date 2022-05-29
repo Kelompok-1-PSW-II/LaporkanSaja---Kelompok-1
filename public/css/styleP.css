@@ -1,8 +1,8 @@
 body {
-    color: #e1e1e1;
+    color: #000000;
     background-color: #FFF9F2;
     font-family: 'Varela Round', sans-serif;
-    font-size: 13px;
+    font-size: 18px;
 }
 h1{
     color: #03256C;
@@ -10,6 +10,9 @@ h1{
     padding-top: 40px;
     font-family: Abhaya Libre ExtraBold;
     font-size: 60px;
+}
+h4{
+    color: #fff;
 }
 .body{
     color: #000;
@@ -21,7 +24,7 @@ h1{
 }
 .table-wrapper {
     background: #367792;
-    padding: 20px 25px;
+    padding: 40px 30px;
     margin: 30px 0;
     border-radius: 20px;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);

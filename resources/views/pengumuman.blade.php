@@ -7,7 +7,7 @@
     <div class="table-wrapper">
         <h2 class="title"><b>{{$b->title}}</b></h2>
         <b>{{$b->tanggal}}</b> <br><br>
-        <p> {{$b->content}}</p>
+        {{$b->content}}
         
     </div>
     @endforeach

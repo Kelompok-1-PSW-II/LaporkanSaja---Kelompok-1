@@ -22,6 +22,7 @@ return new class extends Migration
             $table->longText('deskripsi');
             $table->string('slug')->unique();
             $table->string('gambar');
+            $table->string('status');
             $table->unsignedBigInteger('kategori_id')->nullable();
             $table->foreign('kategori_id')->references('id')->on('kategoris')->onDelete('SET NULL');
             $table->timestamps();
